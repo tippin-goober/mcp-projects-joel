@@ -1,0 +1,32 @@
+### Run Python
+POST http://127.0.0.1:8766/mcp
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "run_python",
+  "params": { "code": "print('hi from MCP')" }
+}
+
+### List Files
+POST http://127.0.0.1:8766/mcp
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "list_files",
+  "params": { "path": "." }
+}
+
+### SQL Query
+POST http://127.0.0.1:8766/mcp
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "method": "sql_query",
+  "params": { "query": "select * from notes" }
+}
